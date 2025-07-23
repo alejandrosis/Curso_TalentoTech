@@ -1,0 +1,14 @@
+Explicación del código:
+
+1. **Estructura básica del HTML**: El documento empieza con `<!DOCTYPE html>`, seguido de la etiqueta `<html>` con el atributo `lang="es"` para especificar que el contenido está en español.
+
+2. **Encabezado (`<head>`)**: Contiene meta etiquetas para definir la codificación de caracteres y la configuración de vista (responsive design), un título para la página, y un bloque de estilo CSS que define la apariencia de los elementos.
+
+3. **Cuerpo (`<body>`)**: Contiene el contenido principal de la página:
+    - Un encabezado principal (`<h1>`) y sub-encabezados (`<h2>`) para organizar el contenido.
+    - Una lista desordenada (`<ul>`) con elementos de lista (`<li>`) que enumeran diferentes frutas.
+    - Una tabla (`<table>`) con una sección de encabezado (`<thead>`) y una sección de cuerpo (`<tbody>`). La tabla tiene filas (`<tr>`) con celdas de encabezado (`<th>`) y celdas de datos (`<td>`).
+
+4. **Estilos CSS**: Define la fuente, el margen, los colores, y otros aspectos visuales para mejorar la presentación.
+
+Este código es un buen punto de partida para entender cómo crear listas y tablas en HTML y aplicar estilos básicos para una mejor presentación.
