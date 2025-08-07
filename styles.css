@@ -43,7 +43,6 @@ body::before {
 /* Header */
 header {
     background: linear-gradient(135deg, rgba(44, 62, 80, 0.95) 0%, rgba(52, 73, 94, 0.95) 100%);
-    backdrop-filter: blur(10px);
     padding: 60px 20px;
     text-align: center;
     position: relative;
@@ -113,7 +112,6 @@ main {
 /* Sections */
 section {
     background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
     margin-bottom: 40px;
     padding: 40px;
     border-radius: 20px;
@@ -265,7 +263,6 @@ li a:hover::before {
 /* Footer mejorado */
 footer {
     background: linear-gradient(135deg, rgba(44, 62, 80, 0.95) 0%, rgba(52, 73, 94, 0.95) 100%) !important;
-    backdrop-filter: blur(10px);
     padding: 40px 20px !important;
     text-align: center !important;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
