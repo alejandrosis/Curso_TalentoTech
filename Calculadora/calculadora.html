@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="Css/styleCalculadora.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <h1 class="calculator-title">🧮 Calculadora</h1>
+        
+        <div class="input-group">
+            <label for="numero1" class="input-label">Digita primer número:</label>
+            <input type="number" id="numero1" class="number-input" placeholder="Ingresa el primer número" step="any">
+        </div>
+        
+        <div class="input-group">
+            <label for="numero2" class="input-label">Digita segundo número:</label>
+            <input type="number" id="numero2" class="number-input" placeholder="Ingresa el segundo número" step="any">
+        </div>        
+        
+        <div class="input-group">
+            <label for="operacion" class="input-label">Operación:</label>
+            <select id="operacion" class="operation-select">
+                <option value="">Selecciona una operación</option>
+                <option value="suma">➕ Suma (+)</option>
+                <option value="resta">➖ Resta (-)</option>
+                <option value="multiplicacion">✖️ Multiplicación (×)</option>
+                <option value="division">➗ División (÷)</option>
+            </select>
+        </div>
+        
+        <button onclick="calcular()" class="calculate-btn">
+            🔢 Calcular
+        </button>
+        
+        <div class="result-container" id="resultado">
+            <div class="result-text">El resultado aparecerá aquí</div>
+        </div>
+        
+        <button onclick="limpiar()" class="clear-btn">
+            🗑️ Limpiar
+        </button>
+    </div>
+    
+    <script src="js/jsCalculadora.js"></script>
+</body>
+</html>
