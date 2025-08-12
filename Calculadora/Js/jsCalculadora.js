@@ -68,6 +68,15 @@ function calcular() {
         <div class="result-text">${numero1} ${simbolo} ${numero2} =</div>
         <div class="result-number">${resultado}</div>
     `);
+
+    // Pregunta para hacer un nuevo cálculo o utilizar el mismo
+    setTimeout(() => {
+        if (confirm('¿Deseas realizar un nuevo cálculo?')) {
+            if (confirm('¿Deseas utilizar diferentes números?')) {
+            limpiar();
+            }
+        }
+    }, 500);    // Tiempo de espera 0.5 segundos
 }
 
 // Función para limpiar los campos
