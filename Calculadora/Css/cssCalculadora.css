@@ -186,3 +186,24 @@
                 font-size: 1rem;
             }
         }
+
+        .back-to-main-btn {
+    position: fixed;
+    top: 20px; /* Distancia desde la parte superior */
+    left: 20px; /* Distancia desde la izquierda */
+    background-color: #007bff; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    display: block; /* Siempre visible */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-to-main-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}

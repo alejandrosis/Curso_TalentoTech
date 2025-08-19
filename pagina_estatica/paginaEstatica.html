@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Primer Sitio Web</title>
+    <link rel="stylesheet" href="Css/cssPaginaEstatica.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a Mi Sitio Personal</h1>
+        <a href="../index.html" id="backToMainBtn" class="back-to-main-btn">← Página Principal</a>
+    </header>
+    <main>
+        <section id="about">
+            <h2>Sobre Mí</h2>
+            <p>¡Hola! Soy Jhon Sandoval, un desarrollador de software apasionado por la tecnología y el diseño. Con 1 año de experiencia en el desarrollo backend, me especializo en crear experiencias digitales únicas y funcionales. Cuando no estoy programando, disfruto explorando nuevas tecnologías, leyendo libros de ciencia ficción y viendo anime.</p>
+            <img src="imgJhon-Sandoval.jpg" alt="Foto de perfil de Jhon Sandoval">
+            <div class="social-links">
+                <a href="https://linkedin.com/in/JhonSandoval" target="_blank">LinkedIn</a>
+                <a href="https://github.com/alejandrosis/Curso_TalentoTech/" target="_blank">GitHub</a>
+                <a href="mailto:alejandro-sistemas@hotmail.com">Email</a>
+            </div>
+        </section>
+        <section id="lists-tables">
+            <h2>Mis Hobbies</h2>
+            <ul>
+                <li>Ver anime</li>
+                <li>Lectura de novelas de ciencia ficción</li>
+                <li>Senderismo y montañismo</li>
+                <li>Aprender nuevos lenguajes de programación</li>
+            </ul>
+            
+            <h2>Tareas Priorizadas</h2>
+            <ol>
+                <li>Completar el curso de programación basica</li>
+                <li>Hacer ejercicio 4 veces por semana</li>
+                <li>Organizar el viaje de fin de año</li>
+                <li>Actualizar mi portafolio profesional</li>
+            </ol>
+            
+            <h2>Mi Horario Semanal</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Hora</th>
+                        <th>Lunes</th>
+                        <th>Martes</th>
+                        <th>Miércoles</th>
+                        <th>Jueves</th>
+                        <th>Viernes</th>
+                        <th>Sábado</th>
+                        <th>Domingo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>5:00 - 6:30</td>
+                        <td>Ejercicio</td>
+                        <td>Ejercicio</td>
+                        <td>Ejercicio</td>
+                        <td>Ejercicio</td>
+                        <td>Ejercicio</td>
+                        <td>Descanso</td>
+                        <td>Descanso</td>
+                    </tr>
+                    <tr>
+                        <td>6:30 - 7:30</td>
+                        <td>Desayuno</td>
+                        <td>Desayuno</td>
+                        <td>Desayuno</td>
+                        <td>Desayuno</td>
+                        <td>Desayuno</td>
+                        <td>Descanso</td>
+                        <td>Descanso</td>
+                    </tr>
+                    <tr>
+                        <td>7:31 - 12:00</td>
+                        <td>Trabajo</td>
+                        <td>Trabajo</td>
+                        <td>Trabajo</td>
+                        <td>Trabajo</td>
+                        <td>Trabajo</td>
+                        <td>Proyectos personales</td>
+                        <td>videos</td>
+                    </tr>
+                    <tr>
+                        <td>12:00 - 13:15</td>
+                        <td>Almuerzo</td>
+                        <td>Almuerzo</td>
+                        <td>Almuerzo</td>
+                        <td>Almuerzo</td>
+                        <td>Almuerzo</td>
+                        <td>Almuerzo</td>
+                        <td>Almuerzo</td>
+                    </tr>
+                    <tr>
+                        <td>13:00 - 17:45</td>
+                        <td>Trabajo</td>
+                        <td>Trabajo</td>
+                        <td>Trabajo</td>
+                        <td>Trabajo</td>
+                        <td>Trabajo</td>
+                        <td>Ocio</td>
+                        <td>Ocio</td>
+                    </tr>
+                    <tr>
+                        <td>18:00 - 21:30</td>
+                        <td>Estudio</td>
+                        <td>Estudio</td>
+                        <td>Estudio</td>
+                        <td>Estudio</td>
+                        <td>Estudio</td>
+                        <td>Ocio</td>
+                        <td>Descansar</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="contact">
+            <h2>Contáctame</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Nombre completo:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="reason">Motivo de contacto:</label>
+                    <select id="reason" name="reason" required>
+                        <option value="">Selecciona un motivo</option>
+                        <option value="trabajo">Oportunidad laboral</option>
+                        <option value="proyecto">Colaboración en proyecto</option>
+                        <option value="consulta">Consulta técnica</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                </div>
+                
+                <button type="submit">Enviar mensaje</button>
+            </form>
+            
+            <div id="successMessage" class="success-message" style="display: none;">
+                <p>¡Gracias por tu mensaje! Te responderé lo antes posible.</p>
+            </div>
+        </section>
+    </main>
+    <script src="Js/jsPaginaEstatica.js"></script>
+</body>
+</html>

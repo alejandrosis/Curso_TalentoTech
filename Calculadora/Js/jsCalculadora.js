@@ -106,3 +106,41 @@ function mostrarResultadoConAnimacion(contenido) {
         resultadoDiv.style.opacity = '1';
     }, 150);
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    const backToTopBtn = document.getElementById("backToTopBtn");
+
+    // Mostrar u ocultar el botón basado en el scroll
+    window.addEventListener("scroll", function() {
+        if (window.pageYOffset > 100) { // Muestra el botón después de 100px de scroll
+            backToTopBtn.style.display = "block";
+        } else {
+            backToTopBtn.style.display = "none";
+        }
+    });
+
+    // Desplazamiento suave al hacer clic en el botón
+    backToTopBtn.addEventListener("click", function(e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const backToTopBtn = document.getElementById("backToTopBtn");
+
+    // Mostrar u ocultar el botón basado en el scroll
+    window.addEventListener("scroll", function() {
+        if (window.pageYOffset > 100) { // Muestra el botón después de 100px de scroll
+            backToTopBtn.style.display = "block";
+        } else {
+            backToTopBtn.style.display = "none";
+        }
+    });
+
+    // Desplazamiento suave al hacer clic en el botón
+    backToTopBtn.addEventListener("click", function(e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+});
