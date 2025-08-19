@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Jhon Sandoval</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/cssHojaVida.css">
 </head>
 <body>
     <div class="container">
@@ -13,12 +13,7 @@
             <div class="profile-section">
                 <div class="profile-image">
                     <div class="avatar">
-                      <img src="img/Jhon-Sandoval.jpg" alt="Foto Jhon Sandoval" class="avatar">
-    <!-- <p style="text-align: center;">
-      <a href="https://github.com/alejandrosis/Curso_TalentoTech" target="_blank">GitHub</a>
-      <a href="https://linkedin.com/in/JhonSandoval" target="_blank">LinkedIn</a>
-      <a href="mailto:alejandro-sistemas@hotmail.com">Email</a>
-    </p> -->
+                      <img src="img/imgJhon-Sandoval.jpg" alt="Foto Jhon Sandoval" class="avatar">
                     </div>
                 </div>
                 <div class="profile-info">
@@ -26,6 +21,7 @@
                     <h2 class="title">Desarrollador de Software</h2>
                 </div>
             </div>
+            <a href="../index.html" id="backToMainBtn" class="back-to-main-btn">← Página Principal</a>
         </header>
 
         <!-- Navigation -->
@@ -203,60 +199,6 @@
         </footer>
     </div>
 
-    <script>
-        // Contact form functionality
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Hide form and show success message
-            document.getElementById('contactForm').style.display = 'none';
-            document.getElementById('successMessage').style.display = 'block';
-            
-            // Reset form after 5 seconds
-            setTimeout(function() {
-                document.getElementById('contactForm').style.display = 'block';
-                document.getElementById('successMessage').style.display = 'none';
-                document.getElementById('contactForm').reset();
-            }, 5000);
-        });
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetSection = document.querySelector(targetId);
-                
-                if (targetSection) {
-                    targetSection.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Active navigation highlighting
-        window.addEventListener('scroll', function() {
-            const sections = document.querySelectorAll('.section');
-            const navLinks = document.querySelectorAll('.nav-link');
-            
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (scrollY >= (sectionTop - 200)) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === '#' + current) {
-                    link.classList.add('active');
-                }
-            });
-        });
-    </script>
+    <script src="js/jsHojaVida.js"></script>
 </body>
 </html>
