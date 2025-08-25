@@ -1,3 +1,5 @@
+let calculoEnProceso = false; // Bandera para evitar múltiples ejecuciones
+
 // Funciones individuales para cada operación
 function sumar(a, b) {
     return a + b;
@@ -24,6 +26,10 @@ function calcular() {
     const numero2 = parseFloat(document.getElementById('numero2').value);
     const operacion = document.getElementById('operacion').value;
     const resultadoDiv = document.getElementById('resultado');
+
+    // Evitar múltiples ejecuciones simultáneas
+    if (calculoEnProceso) return;
+    calculoEnProceso = true;
 
     if (isNaN(numero1) || isNaN(numero2)) {
         mostrarResultadoConAnimacion('<div class="error-message">❌ Por favor, ingresa números válidos</div>');
@@ -69,14 +75,24 @@ function calcular() {
         <div class="result-number">${resultado}</div>
     `);
 
-    // Pregunta para hacer un nuevo cálculo o utilizar el mismo
-    setTimeout(() => {
-        if (confirm('¿Deseas realizar un nuevo cálculo?')) {
-            if (confirm('¿Deseas utilizar diferentes números?')) {
-            limpiar();
+    document.querySelector('.calculate-btn').addEventListener('click', function () {
+        setTimeout(() => {
+            let continuar = true;
+            while (continuar) {
+                // Preguntar si desea realizar otra operación
+                if (confirm("¿Desea realizar otra operación?")) {
+                        limpiar();
+                        continuar = false; // salir del bucle para esperar nueva entrada
+                } else {
+                        alert("Gracias por usar la calculadora 😊");
+                        window.location.href = "../index.html"; // vuelve a la página principal
+                        continuar = false; // salir del bucle para esperar nueva entrada
+                        break;
+                }
             }
-        }
-    }, 500);    // Tiempo de espera 0.5 segundos
+            calculoEnProceso = false;
+        }, 500); // Espera 0.5 segundos antes de preguntar
+});
 }
 
 // Función para limpiar los campos
